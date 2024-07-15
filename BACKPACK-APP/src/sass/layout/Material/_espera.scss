@@ -1,0 +1,48 @@
+// Espera.scss
+.waiting-table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+        margin: 10px;
+        font-size: 15px;
+    }
+
+    .url-admin{
+        font-size: 10px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e6e6e6;
+    }
+
+    .approve-btn,
+    .reject-btn {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    .reject-btn {
+        background-color: #e74c3c;
+    }
+
+    .approve-btn:hover,
+    .reject-btn:hover {
+        background-color: #4F5B80;
+
+    }
+}

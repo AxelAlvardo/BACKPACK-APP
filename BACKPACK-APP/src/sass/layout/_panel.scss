@@ -1,0 +1,134 @@
+.panel-container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 6;
+
+    transition: all .5s;
+
+    background: rgb(255, 255, 255, 0.30);
+    backdrop-filter: blur(20px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 100%;
+
+    animation: show-panel .5s normal;
+
+    @keyframes show-panel{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 100%;
+        }
+    }
+
+    .panel{
+        width: 30%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        background-color: white;
+        padding: 50px;
+        border-radius: 30px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        gap: 40px;
+
+        h2{
+            font-size: 30px;
+            text-transform: uppercase;
+            color: #333;
+        }
+
+        .panel__btn{
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            
+            gap: 20px;
+
+            .pa-btn{
+                cursor: pointer;
+                text-decoration: none;
+                color: white;
+                padding: 15px 0;
+                border-radius: 10px;
+                font-size: 20px;
+                font-weight: 600;
+                width: 50%;
+                text-align: center
+            }
+
+            .pa-sal{
+                background-color: crimson;
+                transition: all .5s;
+
+                &:hover{
+                    box-shadow: rgba(247, 4, 4, 0.418) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                }
+            }
+
+
+            .pa-no{
+                background-color: #8A2AC5;
+                border: none;
+
+                transition: all .5s;
+
+                &:hover{
+                    box-shadow: rgba(198, 4, 247, 0.418) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .panel-container{
+        .panel{
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .panel-container{
+        .panel{
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .panel-container{
+        .panel{
+            flex-direction: column;
+            width: 80%;
+
+            .panel__btn{
+                flex-direction: column;
+
+                .pa-btn{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .panel-container{
+        .panel{
+            flex-direction: column;
+            width: 90%;
+        }
+    }
+}

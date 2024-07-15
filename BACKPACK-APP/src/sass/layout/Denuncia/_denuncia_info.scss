@@ -1,0 +1,40 @@
+// Denuncia_Card.scss
+.denuncia-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e6e6e6;
+    }
+
+    .aprobar,
+    .desaprobar {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    .desaprobar {
+        background-color: #FF4B4B;
+    }
+
+    .aprobar:hover,
+    .desaprobar:hover {
+        background-color: #4F5B80;
+    }
+}

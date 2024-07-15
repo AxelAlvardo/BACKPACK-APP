@@ -1,0 +1,73 @@
+
+.barMat{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+    gap: 100px;
+
+    margin-top: -50px;
+
+
+    .navMat-link{
+        text-decoration: none;
+
+ 
+        .active{
+            background-color: #000;
+        }
+        
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            padding: 10px;
+            border-radius: 50px;
+            border: none;
+
+            background-color: #636363;
+            cursor: pointer;
+            text-align: center;
+    
+            transition: all .5s;
+    
+            color: white;
+            text-align: center;
+            align-items: center;
+            font-weight: 600;
+    
+            gap: 20px;
+    
+            &:hover{
+                box-shadow: rgba(0, 0, 0, 0.36) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                scale: 1.05;
+            }
+    
+            img{
+                background-color: white;
+                padding: 10px;
+                border-radius: 100px;
+            }
+    
+            p{
+                font-size: 20px;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .barMat{
+        margin-top: -40px;
+        flex-direction: column;
+        gap: 30px;
+
+        button{
+            padding: 5px 0;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    pointer-events: none;
+}
+
+.landing{
+    overflow: hidden;
+}
+
+.root{
+    height: 100vh;
+}
+
+.div-main{
+    height: 100%;
+}

@@ -1,0 +1,42 @@
+// Info_User.scss
+
+.info-users-table {
+    width: 950px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e6e6e6;
+    }
+
+    .editar,
+    .eliminar {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    .eliminar {
+        background-color: #e74c3c;
+    }
+
+    .editar:hover,
+    .eliminar:hover {
+        background-color: #4F5B80;
+    }
+}

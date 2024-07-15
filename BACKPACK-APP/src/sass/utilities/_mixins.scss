@@ -1,0 +1,181 @@
+@mixin article-laptop {
+  @media (max-width: 1024px) {
+    .aboutus{
+      .aboutus__article{
+    
+        padding: 1rem;
+    
+        .flowerstyle {
+          margin: 4rem 4rem 0 3rem;
+
+          width: 25rem;
+          height: 28.188rem;
+
+          &__image:nth-child(1) {
+            top: -4rem;
+            left: 4rem;
+          }
+    
+          &__image:nth-child(2) {
+            top: -2rem;
+            right: 2rem;
+          }
+    
+          &__image:nth-child(3) {
+            top: 6rem;
+            left: -0.8rem;
+          }
+    
+          &__image:nth-child(4) {
+            top: 9rem;
+            left: 10rem;
+          }
+    
+          &__image:nth-child(5) {
+            bottom: -3rem;
+            left: 3rem;
+          }
+    
+          &__image:nth-child(6) {
+            bottom: -4rem;
+            right: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin article-tablet-col {
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center; 
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+    .flowerstyle {
+      margin: 4rem 0 4rem;
+      // border: 2px solid black;
+
+      &__image:nth-child(1) {
+        top: -4rem;
+        left: 3rem;
+      }
+
+      &__image:nth-child(2) {
+        top: -2rem;
+        right: -1rem;
+      }
+
+      &__image:nth-child(3) {
+        top: 6rem;
+        left: -4rem;
+      }
+
+      &__image:nth-child(4) {
+        top: 8rem;
+        left: 8rem;
+      }
+
+      &__image:nth-child(5) {
+        bottom: -1.5rem;
+        left: 0rem;
+      }
+
+      &__image:nth-child(6) {
+        bottom: -2rem;
+        right: 1rem;
+      }
+    }
+  }
+}
+
+@mixin info-phone {
+  @media (max-width: 450px) {
+
+    width: 21.875rem;
+    height: auto;
+    padding: 4rem 2rem;
+
+    &__title {
+      font-size: 1.56rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    &__text {
+      text-align: center;
+      font-size: 1.06rem;
+    }
+  }
+}
+
+@mixin image-phone {
+  @media (max-width: 450px) {
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@mixin article-phone {
+  @media (max-width: 450px) {
+
+    padding: 1rem 0;
+
+    .imagescon {
+      justify-content: center;
+      gap: 2rem;
+      width: 100%;
+      height: auto;
+    }
+
+    .flowerstyle {
+      width: 100%;
+      margin: 0;
+      &__image {
+        width: 5.625rem;
+        height: 5.625rem;
+        margin-left: 2rem;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      &__image:nth-child(1) {
+        top: 1rem;
+        left: 3rem;
+      }
+
+      &__image:nth-child(2) {
+        top: 0rem;
+        right: 2rem;
+      }
+
+      &__image:nth-child(3) {
+        top: 8rem;
+        left: 0;
+      }
+
+      &__image:nth-child(4){
+        width: 8.875rem;
+        height: 8.875rem;
+        img {
+          width: 120px;
+          height: auto;
+        }
+      }
+
+      &__image:nth-child(5) {
+        bottom: 3rem;
+        left: 2rem;
+      }
+
+      &__image:nth-child(6) {
+        bottom: 2rem;
+        right: 4rem;
+      }
+    }
+  }
+}
