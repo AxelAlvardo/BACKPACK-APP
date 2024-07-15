@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom"
 
-export const Materia = ({materia, setNameMateria}) => {
+export const Materia = ({materia, setNameMateria, setIdMateria}) => {
 
   return (
     <section className="materia-sector">
@@ -17,6 +17,7 @@ export const Materia = ({materia, setNameMateria}) => {
 
                 <button className='materia__cta' onClick={()=>{
                     setNameMateria(materia.name);
+                    setIdMateria(materia._id);
                 }}>
                     <NavLink to={`/materiaAll`} className='cta'>
                         <p className="cta__p">

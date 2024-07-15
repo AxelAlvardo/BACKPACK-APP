@@ -89,18 +89,19 @@ export const getAllMaterialesClient = async(token)=>{
 } 
 
 
-export const getMateriaEspecific = async(materia)=>{
+export const getMateriaEspecific = async(id, token)=>{
     try {
-        const response = await axios.get(`${baseurl}/document/search/?materia=${materia}`, {
+        const response = await axios.get(`${baseurl}/post/subject/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
               },
         });
 
         if (response.status === 200) {
             console.log(response.data);
-            return response.data
+            return response.data.posts
         }
 
     } catch (error) {

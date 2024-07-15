@@ -9,6 +9,7 @@ import { AddMaterialForm } from '../AddMaterialForm/AddMaterialForm'
 import { getAllMaterialesClient } from '../../../../services/materias.service'
 import { keyGenerator } from '../../../../helpers/key'
 import useAuthStore from '../../../store/store'
+import { whoami } from '../../../../services/favorite.service'
 
 export const Materiales = () => {
   const [backReport, setBackReport] = useState(false);
@@ -18,6 +19,7 @@ export const Materiales = () => {
   const [documentosClient, setDocumentosCLient] = useState([]);
 
   const [search, setSearch] = useState('');
+  const [favArray, setFavArray] = useState([])
   const { token } = useAuthStore();
 
   useEffect(() => {
@@ -26,6 +28,10 @@ export const Materiales = () => {
       try {
         const data = await getAllMaterialesClient(token);
         setDocumentosCLient(data)
+
+        const saveFavs = await whoami(token);
+        setFavArray(saveFavs);
+
       } catch (error) {
         console.log(error);
       }
@@ -63,7 +69,7 @@ export const Materiales = () => {
         <div className='material__div'>
           {
             results.map((doc) => {
-              return <Material setBackReport={setBackReport} doc={doc} key={keyGenerator()}/>
+              return <Material setBackReport={setBackReport} doc={doc} key={keyGenerator()} favArray={favArray}/>
             })
           }
         </div>
