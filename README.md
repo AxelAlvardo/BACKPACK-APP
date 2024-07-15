@@ -1,34 +1,11 @@
 # 🎒 BackPack
-
-## Sec [02] - Grupo N° [03]
-
-### Integrantes
-
-| #   | Nombre           | Carnet   |
-| --- | ---------------- | -------- |
-| 01  | Axel Alvarado    | 00216022 |
-| 02  | Oscar Armando    | 00090822 |
-| 03  | Juan Castellanos | 00182222 |
-
 ## 🧑‍🚀 Test Users
-
-### 🌟 Admin de prueba
-
-**Usuario:** juancastellanos376@gmail.com
-
-**Contraseña:** 1234
 
 ### 🌟 Usuarios de prueba
 
 #### 🚀 Usuario 1 - Civil
 
 **Usuario:** juan.uca@gmail.com
-
-**Contraseña:** 12345678Aa
-
-#### 🚀 Usuario 2 - Informática
-
-**Usuario:** axel.alvarado@gmail.com
 
 **Contraseña:** 12345678Aa
 
