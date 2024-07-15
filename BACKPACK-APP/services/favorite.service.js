@@ -38,3 +38,14 @@ export const getFavorites = async(token)=> {
         return [];
     }
 }
+
+
+export const whoami = async(token)=> {
+    const result = await axios.get(`${baseurl}/auth/whoami`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        },
+    });
+    return result.data.savedPosts
+}

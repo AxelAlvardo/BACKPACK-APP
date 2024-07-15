@@ -8,7 +8,7 @@ import { keyGenerator } from "../../../helpers/key"
 import { NavBar } from "./NavBar/NavBar"
 import useAuthStore from "../../store/store"
 
-export const Home = ({ activeCamp, setActiveCamp, userLog, setNameMateria }) => {
+export const Home = ({ activeCamp, setActiveCamp, userLog, setNameMateria, setIdMateria }) => {
 
   const [materiasHome, setMateriasHome] = useState([]);
 
@@ -52,7 +52,7 @@ export const Home = ({ activeCamp, setActiveCamp, userLog, setNameMateria }) => 
         <div className="materia__div">
           {
             Array.isArray(materiasHome) && results.map((materia) => {
-              return <Materia materia={materia} setNameMateria={setNameMateria} key={keyGenerator()} />
+              return <Materia materia={materia} setNameMateria={setNameMateria} key={keyGenerator()} setIdMateria={setIdMateria} />
             })
           }
 

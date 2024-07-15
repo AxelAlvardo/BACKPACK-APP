@@ -14,9 +14,6 @@ export const NavBar = ({setSearch, search}) => {
     navRef.current.classList.toggle('show');
   } 
 
-  const{token} = useAuthStore();
-
-
   return (
     <header>
 

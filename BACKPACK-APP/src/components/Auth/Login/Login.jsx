@@ -1,12 +1,12 @@
 import { useForm } from 'react-hook-form'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { loginRequest } from '../../../../services/login.service';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Alert } from '../../Alert/Alert';
 import { Error } from '../../Alert/Error';
 import useAuthStore from '../../../store/store';
 
-export const Login = ({ setUserLog }) => {
+export const Login = ({ setUserLog,setIdMateria }) => {
 
     const { register, handleSubmit } = useForm();
     const [error, setError] = useState(false);
@@ -14,6 +14,9 @@ export const Login = ({ setUserLog }) => {
 
     const navigate = useNavigate();
 
+    useEffect(()=> {
+        setIdMateria('')
+    }, [])
 
     //STORE
     const{setToken} = useAuthStore();

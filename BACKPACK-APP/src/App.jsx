@@ -16,21 +16,21 @@ import Admin from './components/Admin/Admin'
 
 function App() {
 
-  const [activeCamp, setActiveCamp] = useState(true);
-
+  const[activeCamp, setActiveCamp] = useState(true);
   const[userLog, setUserLog] = useState({});
-
   const[nameMateria, setNameMateria] = useState('');
 
+  const[idMateria, setIdMateria] = useState('');
+  console.log(idMateria);
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
-        <Route path='login' element={<Login userLog={userLog} setUserLog={setUserLog}/>}/>
+        <Route path='login' element={<Login userLog={userLog} setUserLog={setUserLog} setIdMateria={setIdMateria}/>}/>
         <Route path='register' element={<Register/>}/>
-        <Route path='home' element={<Home activeCamp={activeCamp} setActiveCamp={setActiveCamp} userLog={userLog} setNameMateria={setNameMateria}/>}/>
-        <Route path='materiaAll' element={<MateriaAll nameMateria={nameMateria}/>}/>
+        <Route path='home' element={<Home activeCamp={activeCamp} setActiveCamp={setActiveCamp} userLog={userLog} setNameMateria={setNameMateria} setIdMateria={setIdMateria}/>}/>
+        <Route path='materiaAll' element={<MateriaAll nameMateria={nameMateria} idMateria={idMateria} />}/>
         <Route path='favorites' element={<FavPage/>}/>
         <Route path='materiales' element={<Materiales/>}/>
         <Route path='oneMateria' element={<OneMateria/>}/>

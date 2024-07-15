@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Reporte } from '../Reporte/Reporte';
 import { PDFDownloadLink } from '@react-pdf/renderer';
@@ -6,11 +6,9 @@ import { favoriteService } from '../../../../services/favorite.service';
 import useAuthStore from '../../../store/store';
 
 
-export const Material = ({ setBackReport, doc }) => {
+export const Material = ({ setBackReport, doc, favArray }) => {
 
   const [fav, setFav] = useState(false);
-  const [countFav, setCountFav] = useState(0);
-
 
   const [like, setLike] = useState(false);
   const [countLike, setCountLike] = useState(0);
@@ -21,17 +19,23 @@ export const Material = ({ setBackReport, doc }) => {
   const handleFavClick = async () => {
     try {
 
-      console.log(token);
       favoriteService(doc._id, token);
-
       setFav(!fav);
-      setCountFav(prevCount => fav ? prevCount - 1 : prevCount + 1);
-
+     
     } catch (error) {
       console.error("Error al marcar como favorito:", error);
       alert('Error al marcar como favorito: ' + (error.message || ''));
     }
   }
+
+
+  useEffect(()=> {
+    if (favArray.includes(doc._id)) {
+      setFav(true);
+      return;
+    }
+    setFav(false);
+  }, [])
 
   return (
     <div className='material'>
@@ -64,12 +68,10 @@ export const Material = ({ setBackReport, doc }) => {
               fav ? (
                 <figure>
                   <img src="../../../../public/images/fav.svg" alt="heart-ico" />
-                  <p className='count'>{countFav}</p>
                 </figure>
               ) : (
                 <figure>
                   <img src="../../../../public/images/heart.svg" alt="heart-ico" />
-                  <p className='count'>{countFav}</p>
                 </figure>
               )
             }

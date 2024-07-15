@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import useAuthStore from '../../../store/store'
 
 export const Panel = ({ setBack }) => {
   return (
@@ -10,10 +11,7 @@ export const Panel = ({ setBack }) => {
         <div className="panel__btn">
           <NavLink to='/login' className='pa-btn pa-sal'>Salir</NavLink>
 
-          <button onClick={() => {
-            setBack(false)
-            token = null;
-          }} className='pa-btn pa-no'>
+          <button onClick={() => {setBack(false)}} className='pa-btn pa-no'>
             Regresar
           </button>
 
